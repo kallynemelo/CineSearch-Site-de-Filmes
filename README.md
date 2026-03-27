@@ -63,16 +63,16 @@ Ou:
 ## 🌍 Deploy
 
 🔗 Acesse o projeto online:
-👉 [https://cinesearch-site-de-filmes.netlify.app/](https://cinesearch-site-de-filmes.netlify.app/)
+# 👉 [https://cinesearch-site-de-filmes.netlify.app/](https://cinesearch-site-de-filmes.netlify.app/)
 
 ---
 
 ## 📞 Contato
 
-👩‍💻 **Kallyne Victória Gomes de Melo**
-📧 Email: [kallynemelo2020@gmail.com](mailto:kallynemelo2020@gmail.com)
-🔗 LinkedIn: [www.linkedin.com/in/kallynemelo](http://www.linkedin.com/in/kallynemelo)
-💻 GitHub: [https://github.com/kallynemelo](https://github.com/kallynemelo)
+# 👩‍💻 **Kallyne Victória Gomes de Melo**
+# 📧 Email: [kallynemelo2020@gmail.com](mailto:kallynemelo2020@gmail.com)
+# 🔗 LinkedIn: [www.linkedin.com/in/kallynemelo](http://www.linkedin.com/in/kallynemelo)
+# 💻 GitHub: [https://github.com/kallynemelo](https://github.com/kallynemelo)
 
 ---
 
