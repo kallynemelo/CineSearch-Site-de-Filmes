@@ -69,7 +69,8 @@ Ou:
 
 ## 📞 Contato
 
-* 👩‍💻 **Kallyne Victória Gomes de Melo**
+👩‍💻 **Kallyne Victória Gomes de Melo**
+
 * 📧 Email: [kallynemelo2020@gmail.com](mailto:kallynemelo2020@gmail.com)
 * 🔗 LinkedIn: [www.linkedin.com/in/kallynemelo](http://www.linkedin.com/in/kallynemelo)
 * 💻 GitHub: [https://github.com/kallynemelo](https://github.com/kallynemelo)
