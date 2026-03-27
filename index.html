@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Define que o documento está usando HTML5 -->
+
+<html lang="pt-br">
+<!-- Define o idioma da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres (UTF-8 permite acentos e caracteres especiais) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site ficar responsivo em dispositivos móveis -->
+
+    <title>CineSearch</title>
+    <!-- Título da página que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Importa o arquivo CSS para estilizar a página -->
+</head>
+
+<body>
+
+<div class="container">
+    <!-- Container principal que envolve todo o conteúdo -->
+
+    <main class="content">
+        <!-- Área principal do conteúdo da página -->
+
+        <!-- TOPO DIREITO -->
+        <div class="topo-direito">
+            <!-- Div que agrupa o menu e a barra de pesquisa -->
+
+            <div class="menu-topo">
+                <!-- Menu de navegação -->
+
+                <a href="index.html">Home</a>
+                <!-- Link para a página inicial -->
+
+                <a href="sobre.html">Sobre</a>
+                <!-- Link para a página "Sobre" -->
+
+                <a href="contato.html">Contato</a>
+                <!-- Link para a página de contato -->
+            </div>
+
+            <div class="botaopesquisa">
+                <!-- Área da barra de pesquisa -->
+
+                <input type="text" id="pesquisa" placeholder="Pesquisar...">
+                <!-- Campo de texto onde o usuário digita o que quer buscar -->
+
+                <button id="btnBuscar">Buscar</button>
+                <!-- Botão que provavelmente vai acionar a busca via JavaScript -->
+            </div>
+        </div>
+
+        <!-- CONTEÚDO INICIAL -->
+        <div id="resultado">
+            <!-- Área onde o conteúdo (ou resultados da busca) será exibido -->
+
+            <img src="cineSearch.png" alt="CineSearch" width="200px">
+            <!-- Imagem/logo do site -->
+
+            <h1>Bem-vindo ao CineSearch!</h1>
+            <!-- Título principal -->
+
+            <p>
+                Encontre informações sobre seus filmes favoritos, descubra novos lançamentos 
+                e explore o mundo do cinema com facilidade.
+            </p>
+            <!-- Texto descritivo inicial -->
+        </div>
+
+    </main>
+</div>
+
+<script src="js/javascript.js"></script>
+<!-- Importa o arquivo JavaScript que vai adicionar interatividade (ex: busca de filmes) -->
+
+</body>
+</html>

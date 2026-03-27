@@ -1,0 +1,367 @@
+/*ESTILOS GERAIS*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Define a fonte padrão do site */
+
+    background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+    /* Fundo com degradê escuro (visual moderno) */
+
+    min-height: 100vh;
+    /* Garante que o body ocupe toda a altura da tela */
+
+    color: #fff;
+    /* Cor padrão do texto (branco) */
+}
+
+.container {
+    max-width: 1200px;
+    /* Largura máxima do conteúdo */
+
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+
+    padding: 20px;
+    /* Espaçamento interno */
+}
+
+/*TOPO (MENU + PESQUISA)*/
+.topo-direito {
+    display: flex;
+    /* Ativa Flexbox */
+
+    justify-content: space-between;
+    /* Espaça menu e busca */
+
+    align-items: center;
+    /* Alinha verticalmente */
+
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    /* Permite quebrar linha em telas menores */
+
+    gap: 20px;
+}
+
+.menu-topo a {
+    color: #00bcd4;
+    /* Cor dos links */
+
+    text-decoration: none;
+    /* Remove sublinhado */
+
+    margin-right: 20px;
+
+    font-weight: 500;
+
+    transition: color 0.3s;
+    /* Animação suave ao passar o mouse */
+
+    cursor: pointer;
+}
+
+.menu-topo a:hover {
+    color: #fff;
+    /* Muda cor ao passar o mouse */
+}
+
+/* BARRA DE PESQUISA*/
+.botaopesquisa {
+    display: flex;
+    gap: 10px;
+    /* Espaço entre input e botão */
+}
+
+.botaopesquisa input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+
+    width: 300px;
+    font-size: 14px;
+}
+
+.botaopesquisa button {
+    padding: 10px 20px;
+
+    background: #00bcd4;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: background 0.3s;
+}
+
+.botaopesquisa button:hover {
+    background: #0097a7;
+    /* Cor ao passar o mouse */
+}
+
+/*CONTEÚDO INICIAL*/
+#resultado {
+    text-align: center;
+    padding: 40px 20px;
+
+    position: relative;
+    /* Evita sobreposição de elementos */
+}
+
+#resultado img[alt="CineSearch"] {
+    margin-bottom: 20px;
+}
+
+#resultado h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #00bcd4;
+}
+
+#resultado p {
+    font-size: 1.1em;
+    color: #aaa;
+
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/*GRID DE FILME*/
+#resultado:not(:has(img[alt="CineSearch"])) {
+    display: grid;
+    /* Ativa layout em grid quando NÃO é a tela inicial */
+
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Cria colunas responsivas automaticamente */
+
+    gap: 30px;
+
+    text-align: left;
+    padding: 20px 0;
+    position: relative;
+}
+
+/*CARD DO FILME*/
+.filme-card {
+    background: rgba(255, 255, 255, 0.05);
+    /* Fundo transparente */
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    backdrop-filter: blur(10px);
+    /* Efeito glassmorphism */
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    /* Organiza conteúdo em coluna */
+
+    height: 100%;
+    /* Mantém altura uniforme */
+}
+
+.filme-card:hover {
+    transform: translateY(-5px);
+    /* Efeito de levantar o card */
+
+    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+}
+
+.filme-card img {
+    width: 100%;
+    height: 450px;
+
+    object-fit: cover;
+    /* Faz a imagem se ajustar sem distorcer */
+
+    display: block;
+    /* Remove espaço extra */
+
+    flex-shrink: 0;
+    /* Impede a imagem de encolher */
+}
+
+.filme-info {
+    padding: 20px;
+
+    flex: 1;
+    /* Ocupa espaço restante */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.filme-info h3 {
+    font-size: 1.2em;
+    color: #00bcd4;
+    margin-bottom: 10px;
+
+    min-height: 50px;
+    /* Mantém altura uniforme dos títulos */
+}
+
+.filme-meta {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* SINOPSE */
+.filme-sinopse {
+    color: #ccc;
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    /* Mostra o texto completo (sem corte) */
+}
+
+/* CLASSIFICAÇÃO (ESTRELAS)*/
+.classificacao-usuario {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding-top: 15px;
+    margin-top: auto;
+    /* Empurra para o final do card */
+}
+
+.classificacao-usuario p {
+    font-size: 0.85em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.estrelas {
+    display: flex;
+    gap: 5px;
+}
+
+.estrela {
+    font-size: 1.8em;
+    color: #444;
+
+    cursor: pointer;
+
+    transition: color 0.2s, transform 0.2s;
+
+    user-select: none;
+    /* Impede seleção do texto */
+}
+
+.estrela:hover {
+    transform: scale(1.2);
+    color: #ffd700;
+    /* Cor dourada ao passar o mouse */
+}
+
+.estrela.preenchida {
+    color: #ffd700;
+    /* Estrela ativa */
+}
+
+/*FEEDBACK E CONTADOR*/
+.contador-resultados {
+    grid-column: 1 / -1;
+    /* Ocupa toda a largura do grid */
+
+    font-size: 1.2em;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.feedback-classificacao {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    background: #00bcd4;
+    color: white;
+
+    padding: 15px 25px;
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    animation: slideIn 0.3s ease;
+
+    z-index: 1000;
+    /* Fica acima de tudo */
+}
+
+/* Animação */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* MENSAGEM DE ERRO*/
+#resultado p:only-child {
+    grid-column: 1 / -1;
+
+    font-size: 1.3em;
+    color: #fff;
+
+    padding: 40px;
+}
+
+/*RESPONSIVIDADE*/
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    #resultado:not(:has(img[alt="CineSearch"])) {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    .filme-card img {
+        height: 350px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .topo-direito {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu-topo {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .botaopesquisa {
+        flex-direction: column;
+    }
+
+    .botaopesquisa input {
+        width: 100%;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    #resultado:not(:has(img[alt="CineSearch"])) {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-classificacao {
+        left: 15px;
+        right: 15px;
+        text-align: center;
+    }
+}
