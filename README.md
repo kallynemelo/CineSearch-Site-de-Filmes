@@ -1,6 +1,6 @@
 # 🎬 CineSearch - Site de Filmes Catalogados
 
-O **CineSearch** é um projeto acadêmico desenvolvido durante a disciplina **Coding: Mobile** da SENAC Pernambuco.
+O **CineSearch** é um projeto acadêmico desenvolvido para a disciplina **Coding: Mobile** da Faculdade SENAC Pernambuco.
 
 O objetivo do projeto foi criar um site responsivo utilizando **HTML**, **CSS** e **JavaScript**, com integração a uma **API online**. O site permite a busca e exibição dinâmica de filmes.
 
