@@ -9,8 +9,15 @@ body {
     min-height: 100vh;
     /* Garante que o body ocupe toda a altura da tela */
 
+    margin: 0;
+    /* Remove margem padrão do navegador */
+
     color: #fff;
     /* Cor padrão do texto (branco) */
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .container {
@@ -61,6 +68,12 @@ body {
     cursor: pointer;
 }
 
+.menu-topo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+}
+
 .menu-topo a:hover {
     color: #fff;
     /* Muda cor ao passar o mouse */
@@ -71,7 +84,8 @@ body {
     display: flex;
     gap: 10px;
     /* Espaço entre input e botão */
-        align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
 
 }
 
@@ -80,21 +94,63 @@ body {
     border: none;
     border-radius: 5px;
 
-    max-width: 90%;
+    min-width: 220px;
+    width: 280px;
+    max-width: 100%;
     font-size: 14px;
 }
 
 .imagem{
-    width: 550px;
+    width: min(550px, 100%);
+    height: auto;
 }
 
 .texto-boas-vindas{
-    margin-top: -100px;
+    margin-top: 0;
+}
+
+@media (min-width: 1025px) {
+    .container {
+        padding: 28px;
+    }
+
+    .topo-direito {
+        margin-bottom: 28px;
+    }
+
+    .menu-topo {
+        align-items: center;
+    }
+
+    .menu-topo a {
+        margin-right: 0;
+    }
+
+    .botaopesquisa input {
+        width: 320px;
+    }
+
+    .botaopesquisa button {
+        min-width: 120px;
+    }
+
+    #resultado:has(img[alt="CineSearch"]) {
+        padding-top: 16px;
+        padding-bottom: 28px;
+    }
+
+    #resultado img[alt="CineSearch"] {
+        margin-bottom: 10px;
+    }
+
+    #resultado:has(img[alt="CineSearch"]) .texto-boas-vindas {
+        margin-top: -14px;
+    }
 }
 
 .botaopesquisa button {
     padding: 10px 20px;
-    width: 50%;
+    width: auto;
 
     background: #00bcd4;
     color: white;
@@ -126,14 +182,18 @@ body {
     margin-bottom: 20px;
 }
 
+#resultado:has(img[alt="CineSearch"]) .texto-boas-vindas {
+    margin-top: -24px;
+}
+
 #resultado h1 {
-    font-size: 2.5em;
+    font-size: clamp(1.8rem, 4.5vw, 2.5rem);
     margin-bottom: 15px;
     color: #00bcd4;
 }
 
 #resultado p {
-    font-size: 1.1em;
+    font-size: clamp(1rem, 2.8vw, 1.1rem);
     color: #aaa;
 
     max-width: 600px;
@@ -187,7 +247,7 @@ body {
 
 .filme-card img {
     width: 100%;
-    height: 450px;
+    height: 420px;
 
     object-fit: cover;
     /* Faz a imagem se ajustar sem distorcer */
@@ -340,7 +400,7 @@ body {
     }
 
     .filme-card img {
-        height: 350px;
+        height: 340px;
     }
 }
 
@@ -354,23 +414,50 @@ body {
     .menu-topo {
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 20px;
+    }
+
+    .menu-topo a {
+        margin-right: 0;
     }
 
     .imagem{
-        width: 220px;
-        margin-top: -50px;
+        width: min(300px, 100%);
+        margin-top: 0;
     }
     .texto-boas-vindas{
-        margin-top: -30px;
+        margin-top: 0;
     }
 
     .botaopesquisa {
         flex-direction: column;
+        align-items: stretch;
+        width: 100%;
     }
 
     .botaopesquisa input {
         width: 100%;
+        min-width: 0;
+    }
+
+    .botaopesquisa button {
+        width: 100%;
+    }
+
+    #resultado {
+        padding: 24px 10px;
+    }
+
+    #resultado:has(img[alt="CineSearch"]) {
+        padding-top: 8px;
+    }
+
+    #resultado:has(img[alt="CineSearch"]) .texto-boas-vindas {
+        margin-top: -16px;
+    }
+
+    .filme-card img {
+        height: 300px;
     }
 }
 
@@ -378,6 +465,32 @@ body {
 @media (max-width: 480px) {
     #resultado:not(:has(img[alt="CineSearch"])) {
         grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    .menu-topo {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .topo-direito {
+        gap: 14px;
+        margin-bottom: 24px;
+    }
+
+    .filme-card img {
+        height: 260px;
+    }
+
+    #resultado:has(img[alt="CineSearch"]) {
+        padding-top: 4px;
+    }
+
+    #resultado:has(img[alt="CineSearch"]) .texto-boas-vindas {
+        margin-top: -12px;
     }
 
     .feedback-classificacao {

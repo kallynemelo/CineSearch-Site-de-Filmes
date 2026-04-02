@@ -1,23 +1,31 @@
 /* Container principal */
 .sobre-container {
+    display: block;
     align-items: center;
     text-align: center;
     padding: 20px;
 }
 
+#resultado.sobre-container:not(:has(img[alt="CineSearch"])) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    text-align: center;
+}
+
 /* Título */
 .sobre-titulo {
     color: #00bcd4;
-    font-size: 2.5em;
-    margin-bottom: 20px
-    align-items: center;
-    text
+    font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+    margin: 0 0 10px;
 }
 
 /* Conteúdo central */
 .sobre-conteudo {
     max-width: 800px;
-    margin: 90px auto 0 auto;
+    margin: 0 auto;
     color: #ccc;
     line-height: 1.8;
 }
@@ -25,7 +33,7 @@
 /* Texto */
 .sobre-texto {
     font-size: 1.1em;
-    margin: 20px;
+    margin: 20px 0;
     
 }
 
@@ -40,4 +48,50 @@
     text-align: left;
     display: inline-block;
     margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+@media (min-width: 1025px) {
+    .sobre-container {
+        padding-top: 12px;
+    }
+
+    #resultado.sobre-container:not(:has(img[alt="CineSearch"])) {
+        gap: 18px;
+    }
+
+    .sobre-conteudo {
+        max-width: 860px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-container {
+        padding: 10px;
+    }
+
+    .sobre-conteudo {
+        margin-top: 0;
+    }
+
+    .sobre-texto,
+    .sobre-subtitulo {
+        font-size: 1rem;
+    }
+
+    .sobre-lista {
+        display: block;
+        text-align: left;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-container {
+        padding: 0;
+    }
+
+    .sobre-lista {
+        padding-left: 18px;
+    }
 }
