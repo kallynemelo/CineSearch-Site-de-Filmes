@@ -24,6 +24,8 @@ body {
     /* Espaçamento interno */
 }
 
+
+
 /*TOPO (MENU + PESQUISA)*/
 .topo-direito {
     display: flex;
@@ -69,6 +71,8 @@ body {
     display: flex;
     gap: 10px;
     /* Espaço entre input e botão */
+        align-items: center;
+
 }
 
 .botaopesquisa input {
@@ -76,12 +80,21 @@ body {
     border: none;
     border-radius: 5px;
 
-    width: 300px;
+    max-width: 90%;
     font-size: 14px;
+}
+
+.imagem{
+    width: 550px;
+}
+
+.texto-boas-vindas{
+    margin-top: -100px;
 }
 
 .botaopesquisa button {
     padding: 10px 20px;
+    width: 50%;
 
     background: #00bcd4;
     color: white;
@@ -342,6 +355,14 @@ body {
         display: flex;
         justify-content: center;
         gap: 15px;
+    }
+
+    .imagem{
+        width: 220px;
+        margin-top: -50px;
+    }
+    .texto-boas-vindas{
+        margin-top: -30px;
     }
 
     .botaopesquisa {

@@ -1,0 +1,43 @@
+/* Container principal */
+.sobre-container {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Título */
+.sobre-titulo {
+    color: #00bcd4;
+    font-size: 2.5em;
+    margin-bottom: 20px
+    align-items: center;
+    text
+}
+
+/* Conteúdo central */
+.sobre-conteudo {
+    max-width: 800px;
+    margin: 90px auto 0 auto;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* Texto */
+.sobre-texto {
+    font-size: 1.1em;
+    margin: 20px;
+    
+}
+
+/* Subtítulo */
+.sobre-subtitulo {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Lista */
+.sobre-lista {
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 30px;
+}
