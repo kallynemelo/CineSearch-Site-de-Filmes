@@ -201,13 +201,10 @@ body {
 }
 
 /*GRID DE FILME*/
-#resultado:not(:has(img[alt="CineSearch"])) {
+#resultado.grid-filmes {
     display: grid;
-    /* Ativa layout em grid quando NÃO é a tela inicial */
-
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     /* Cria colunas responsivas automaticamente */
-
     gap: 30px;
 
     text-align: left;

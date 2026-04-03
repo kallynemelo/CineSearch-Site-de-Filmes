@@ -116,6 +116,8 @@ function mostrarFilmes(filmes) {
 
     container.innerHTML = "";
 
+    container.classList.add("grid-filmes");
+
     if (!filmes || filmes.length === 0) {
         container.innerHTML = "<p>Nenhum filme encontrado.</p>";
         return;
@@ -236,7 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const inputPesquisa = document.getElementById("pesquisa");
     if (inputPesquisa) {
-        // 🔥 CORREÇÃO AQUI
         inputPesquisa.addEventListener("keydown", (e) => {
             if (e.key === "Enter") {
                 buscarFilmes();

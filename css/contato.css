@@ -6,8 +6,7 @@
     padding: 20px;
 }
 
-#resultado.contato-container:not(:has(img[alt="CineSearch"])) {
-    display: flex;
+#resultado.contato-container {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -68,7 +67,7 @@
         padding-top: 12px;
     }
 
-    #resultado.contato-container:not(:has(img[alt="CineSearch"])) {
+    #resultado.contato-container {
         gap: 22px;
     }
 
