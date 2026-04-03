@@ -1,17 +1,26 @@
 # 🎬 CineSearch - Site de Filmes Catalogados
 
-O **CineSearch** é um projeto acadêmico desenvolvido para a disciplina **Coding: Mobile** da Faculdade SENAC Pernambuco.
-
-O objetivo do projeto foi criar um site responsivo utilizando **HTML**, **CSS** e **JavaScript**, com integração a uma **API online**. O site permite a busca e exibição dinâmica de filmes.
+O **CineSearch** é um projeto acadêmico desenvolvido para a disciplina **Coding: Mobile** da Faculdade SENAC Pernambuco. O objetivo do projeto foi criar um site responsivo utilizando **HTML**, **CSS** e **JavaScript**, com integração a uma **API online**. O site permite a busca e exibição dinâmica de filmes.
 
 ---
 
 ## 🚀 Funcionalidades
 
-* 🔍 Busca de filmes em tempo real
-* 🎥 Exibição de pôsteres, títulos e informações dos filmes
-* 📱 Layout responsivo (adaptável para mobile e desktop)
-* 🌐 Consumo de API externa para dados atualizados
+* 🔍 Busca de filmes em tempo real  
+* 🎥 Exibição de pôsteres, títulos e informações dos filmes  
+* 📱 Layout responsivo (adaptável para mobile e desktop)  
+* 🌐 Consumo de API externa para dados atualizados  
+* ⭐ Sistema de avaliação com estrelas  
+* 📳 Feedback tátil (vibração) ao interagir com a avaliação (em dispositivos compatíveis)  
+* 📲 Possibilidade de instalação como aplicativo (**Progressive Web App - PWA**, com suporte a Web App Manifest)  
+
+---
+
+##  ⚙️ Funcionalidades Avançadas
+
+* Progressive Web App (PWA)  
+* Service Worker (cache e suporte offline)  
+* Vibration API (integração com hardware do dispositivo) 
 
 ---
 
@@ -28,10 +37,13 @@ O objetivo do projeto foi criar um site responsivo utilizando **HTML**, **CSS** 
 
 Este projeto foi desenvolvido com foco em:
 
-* Praticar integração com APIs (requisições HTTP)
-* Manipulação do DOM com JavaScript
-* Desenvolvimento de interfaces responsivas
-* Organização e boas práticas de código
+* Praticar integração com APIs (requisições HTTP)  
+* Manipulação do DOM com JavaScript  
+* Desenvolvimento de interfaces responsivas  
+* Organização e boas práticas de código  
+* Implementação de **Service Worker** para suporte offline  
+* Utilização de **feedback tátil (Vibration API)** para melhorar a experiência do usuário  
+* Configuração de **Web App Manifest**, arquivo JSON essencial em aplicações PWA, responsável por definir como o aplicativo pode ser instalado e exibido no dispositivo do usuário
 
 ---
 
@@ -41,7 +53,7 @@ Você pode rodar o projeto localmente de forma simples:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/SEU-USUARIO/cinesearch.git
+git clone https://github.com/SEU-USUARIO/CineSearch-Site-de-Filmes.git
 
 # Acesse a pasta do projeto
 cd cinesearch
@@ -55,15 +67,14 @@ index.html
 
 Ou:
 
-* Clique duas vezes no arquivo `index.html`, ou
-* Use a extensão **Live Server** no VS Code para melhor experiência
+* Clique duas vezes no arquivo `index.html`, ou use a extensão **Live Server** no VS Code para melhor experiência
 
 ---
 
 ## 🌍 Deploy
 
 🔗 Acesse o projeto online:
-* 👉 [https://cinesearch-site-de-filmes.netlify.app/](https://cinesearch-site-de-filmes.netlify.app/)
+* 👉 https://cinesearch-filmes-diversos.netlify.app/
 
 ---
 
@@ -79,4 +90,5 @@ Ou:
 
 ## 📌 Observações
 
-Este projeto foi desenvolvido para fins educacionais, com o objetivo de consolidar conhecimentos em desenvolvimento web e consumo de APIs.
+Este projeto foi desenvolvido para fins educacionais, com foco na prática de desenvolvimento web moderno.
+Além dos requisitos iniciais, foram implementadas melhorias como recursos de Progressive Web App (PWA) e feedback tátil, proporcionando uma experiência mais próxima de aplicações reais utilizadas no mercado.
